@@ -133,17 +133,9 @@
         </mj-column>
       </mj-section>
 
-
-
-
-
-
-
-
       <!-- footer-bottom -->
       <mj-section padding="0" background-color="transparent">
         <mj-column padding="0 15px 30px 15px" css-class="separate" border-radius="0 0 6px 6px" background-color="#fff">
-
         </mj-column>
       </mj-section>
 
