@@ -105,7 +105,7 @@
           </mj-text>
           <mj-text>
             <ul>
-              <li><a href="_layout.html">layout</a></li>
+              <li><a href="layout.html">layout</a></li>
 
               <li><a href="registration.html">Подтверждение регистрации</a></li>
               <li><a href="password.html">Восстановление пароля</a></li>
