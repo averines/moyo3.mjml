@@ -5,17 +5,19 @@
 
     <mj-attributes>
       <mj-all font-family="Arial, Helvetica" />
-      <mj-body background-color="#f7f7f7" />
-      <mj-section padding="0" background-color="#ffffff" />
       <mj-text color="#232d37" font-size="17px" line-height="22px" />
-      <mj-button color="#ffffff" background-color="#ab064e" font-size="16px" line-height="28px" font-weight="bold" border-radius="6px" />
+      <mj-button color="#fff" background-color="#ab064e" font-size="16px" line-height="28px" font-weight="bold" border-radius="6px" />
       <mj-divider border-color="#f0f0f0" border-width="1px" padding="30px 25px" />
-      <mj-class name="h1" font-size="28px" line-height="33px" font-weight="bold" padding-top="60px" padding-right="30px" />
+      <mj-section padding="0 15px" background-color="#fff" />
+      <mj-body background-color="#f7f7f7" />
+      <mj-button color="#fff" />
+
+      <mj-class name="h1" font-size="28px" line-height="33px" font-weight="bold" />
       <mj-class name="h2" font-size="20px" line-height="28px" font-weight="bold" />
       <mj-class name="footer-contacts" font-size="16px" line-height="19px" color="#83898d" />
       <mj-class name="footer-bottom" font-size="14px" line-height="19px" color="#83898d" />
-      <mj-class name="product" font-size="16px" line-height="17px" />
     </mj-attributes>
+
     <mj-style inline="inline">
       .gradient > table {
       background: linear-gradient(120deg, #980764, #d50342) !important;
@@ -26,11 +28,12 @@
       .wrapper {
       box-shadow: 0 5px 7px #e7e7e7 !important;
       border-radius: 6px !important;
+      margin-bottom: 50px !important;
       }
 
-      a {
+      .wrapper p a {
       text-decoration: none !important;
-      color: #ab064e;
+      color: #ab064e !important;
       }
 
       .link-box a {
@@ -50,6 +53,10 @@
       line-height: 30px !important;
       }
 
+      .pic img {
+      border-radius: 10px !important;
+      }
+
       .order-info th {
       font-weight: 400 !important;
       color: #adb2b5 !important;
@@ -65,11 +72,11 @@
       margin: 5px 0 10px 0 !important;
       }
 
-      .good {
-      color: #038184 !important;
+      .order-pic img {
+      border-radius: 4px !important;
       }
-
     </mj-style>
+
     <mj-style>
       @media (max-width:480px) {
 
@@ -97,31 +104,27 @@
         </mj-column>
       </mj-section>
 
-      <!-- content -->
+      <!-- title -->
       <mj-section>
         <mj-column>
           <mj-text mj-class="h1" padding-top="60px" padding-right="30px">
             Шаблоны писем
           </mj-text>
+        </mj-column>
+      </mj-section>
+
+      <!-- text -->
+      <mj-section>
+        <mj-column>
           <mj-text>
             <ul>
-              <li><a href="_layout.html">layout</a></li>
-
               <li><a href="registration.html">Подтверждение регистрации</a></li>
               <li><a href="password.html">Восстановление пароля</a></li>
+              <li><a href="feedback.html">Отзыв опубликован</a></li>
 
               <li><a href="order-new.html">Заказ принят</a></li>
-              <li><a href="order-new-comment.html">Заказ принят. С комментарием</a></li>
-
+              <li><a href="order-confirm.html">Выставлен счет</a></li>
               <li><a href="order-sent.html">Заказ отправлен</a></li>
-              <li><a href="order-sent-return-account.html">Заказ отправлен. Заполнить заявку на возврат</a></li>
-              <li><a href="order-sent-return-card.html">Заказ отправлен. Подтвердить заявку на возврат</a></li>
-
-              <li><a href="invoice.html">Выставлен новый счет</a></li>
-              <li><a href="invoice-warning.html">Выставлен новый счет. С предупреждением</a></li>
-
-              <li><a href="published-review.html">Отзыв опубликован</a></li>
-              <li><a href="published-question.html">Вопрос/отзыв опубликован</a></li>
 
               <li><a href="products.html">Рассылка с товарами</a></li>
               <li><a href="promo.html">Рассылка с баннером</a></li>

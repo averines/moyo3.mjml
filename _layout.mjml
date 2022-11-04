@@ -1,6 +1,6 @@
 <mjml lang="ru">
   <mj-head>
-    <mj-title>Рассылка с картинкой</mj-title>
+    <mj-title>Заголовок</mj-title>
     <mj-attributes>
       <mj-all font-family="Arial, Helvetica" />
       <mj-body background-color="#f7f7f7" />
@@ -95,41 +95,9 @@
         </mj-column>
       </mj-section>
 
-      <mj-raw>__START__</mj-raw>
-      <!-- pic -->
-      <mj-section>
-        <mj-column padding="20px 0 0 0">
-          <mj-image href="__PHOTOLINK__" src="__PHOTOURL__" alt="__PHOTOALT__" border-radius="10px" />
-        </mj-column>
-      </mj-section>
-
-      <!-- text -->
-      <mj-section>
-        <mj-column>
-          <mj-text>
-            <p>Здравствуйте, __NAMENAME__!</p>
-            <p>__TEXT__</p>
-          </mj-text>
-        </mj-column>
-      </mj-section>
-
-      <!-- categories -->
-      <mj-section padding="50px 0 0 0" background-color="#fff">
-        <mj-column width="100%" padding="0">
-          <mj-image src="https://cdn0.moyo.moda/static/ws/mail/cats.png" alt="Категории товаров на сайте" padding="0" />
-        </mj-column>
-        <mj-column width="100%">
-          <mj-text css-class="categories" align="center">
-            <a href="https://optmoyo.ru/zhen/catalog" target="_blank">Женщинам</a>
-            <a href="https://optmoyo.ru/devochki/catalog" target="_blank">Девочкам</a>
-            <a href="https://optmoyo.ru/muzh/catalog" target="_blank">Мужчинам</a>
-            <a href="https://optmoyo.ru/malchiki/catalog" target="_blank">Мальчикам</a>
-            <a href="https://optmoyo.ru/house/catalog" target="_blank">Для дома</a>
-            <a href="https://optmoyo.ru/toys/catalog" target="_blank">Игрушки</a>
-          </mj-text>
-        </mj-column>
-      </mj-section>
-      <mj-raw>__END__</mj-raw>
+      <mj-raw>
+        __BODY__
+      </mj-raw>
 
       <!-- footer-content -->
       <mj-section padding="0">

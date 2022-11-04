@@ -1,6 +1,6 @@
 <mjml lang="ru">
   <mj-head>
-    <mj-title>Рассылка с картинкой</mj-title>
+    <mj-title>Ваш вопрос/отзыв опубликован на OptMoyo.ru</mj-title>
     <mj-attributes>
       <mj-all font-family="Arial, Helvetica" />
       <mj-body background-color="#f7f7f7" />
@@ -96,20 +96,38 @@
       </mj-section>
 
       <mj-raw>__START__</mj-raw>
-      <!-- pic -->
+
       <mj-section>
-        <mj-column padding="20px 0 0 0">
-          <mj-image href="__PHOTOLINK__" src="__PHOTOURL__" alt="__PHOTOALT__" border-radius="10px" />
+        <mj-column>
+          <mj-text mj-class="h1">
+            Ваш вопрос/отзыв опубликован
+          </mj-text>
+          <mj-text>
+            <p>Здравствуйте, __USER__!</p>
+            <p>Ваш отзыв/вопрос по товару <a href="https://optmoyo.ru/product/__PRODNO__" target="_blank">#__PRODNO__</a> опубликован.</p>
+          </mj-text>
         </mj-column>
       </mj-section>
 
-      <!-- text -->
+      <!-- box -->
+      <mj-section>
+        <mj-column inner-border-radius="6px" inner-background-color="#fafafa" padding="10px 25px">
+          <mj-text css-class="link-box">
+            <p><i>__TEXT__</i></p>
+            <p>
+              <b>Ответ OptMoyo.ru:</b> <br />
+              <i>__ANSWER__</i>
+            </p>
+          </mj-text>
+        </mj-column>
+      </mj-section>
+
+      <!-- button -->
       <mj-section>
         <mj-column>
-          <mj-text>
-            <p>Здравствуйте, __NAMENAME__!</p>
-            <p>__TEXT__</p>
-          </mj-text>
+          <mj-button href="https://optmoyo.ru/product/__PRODNO__" align="left">
+            Смотреть на сайте
+          </mj-button>
         </mj-column>
       </mj-section>
 

@@ -1,6 +1,6 @@
 <mjml lang="ru">
   <mj-head>
-    <mj-title>Рассылка с картинкой</mj-title>
+    <mj-title>Вам выставлен новый счет</mj-title>
     <mj-attributes>
       <mj-all font-family="Arial, Helvetica" />
       <mj-body background-color="#f7f7f7" />
@@ -96,39 +96,95 @@
       </mj-section>
 
       <mj-raw>__START__</mj-raw>
-      <!-- pic -->
-      <mj-section>
-        <mj-column padding="20px 0 0 0">
-          <mj-image href="__PHOTOLINK__" src="__PHOTOURL__" alt="__PHOTOALT__" border-radius="10px" />
-        </mj-column>
-      </mj-section>
-
       <!-- text -->
       <mj-section>
         <mj-column>
+          <mj-text mj-class="h1">
+            Ваш заказ принят!
+          </mj-text>
           <mj-text>
-            <p>Здравствуйте, __NAMENAME__!</p>
-            <p>__TEXT__</p>
+            <p>Здравствуйте, __USER__!</p>
+            <p>Ваш заказ <b>№__ORDER_NOs__</b> от __ORDERDATE__ принят__PAROVOZ__ и находится в обработке.</p>
           </mj-text>
         </mj-column>
       </mj-section>
 
-      <!-- categories -->
-      <mj-section padding="50px 0 0 0" background-color="#fff">
-        <mj-column width="100%" padding="0">
-          <mj-image src="https://cdn0.moyo.moda/static/ws/mail/cats.png" alt="Категории товаров на сайте" padding="0" />
-        </mj-column>
-        <mj-column width="100%">
-          <mj-text css-class="categories" align="center">
-            <a href="https://optmoyo.ru/zhen/catalog" target="_blank">Женщинам</a>
-            <a href="https://optmoyo.ru/devochki/catalog" target="_blank">Девочкам</a>
-            <a href="https://optmoyo.ru/muzh/catalog" target="_blank">Мужчинам</a>
-            <a href="https://optmoyo.ru/malchiki/catalog" target="_blank">Мальчикам</a>
-            <a href="https://optmoyo.ru/house/catalog" target="_blank">Для дома</a>
-            <a href="https://optmoyo.ru/toys/catalog" target="_blank">Игрушки</a>
+      <!-- box -->
+      <mj-section>
+        <mj-column inner-border-radius="6px" inner-background-color="#fafafa" padding="20px 25px 20px 25px">
+          <mj-text padding="10px 30px 5px 30px" font-size="13px">
+            <p><b>Получатель</b><br />__CUSTOMERNAME__</p>
+            <p><b>Телефон</b><br />__PHONE__</p>
+            <p><b>Адрес</b><br />__ADDRESS__</p>
+          </mj-text>
+
+          <!-- divider -->
+          <mj-divider padding="0 25px" />
+
+          <mj-text padding="5px 30px 10px 30px" font-size="13px">
+            <p><b>Оплата</b><br />__PAYMENT__</p>
+            <p><b>Доставка</b><br />__DELIVERY__</p>
+            <p><b>Комментарий</b><br />__COMMENT__</p>
           </mj-text>
         </mj-column>
       </mj-section>
+
+      <mj-raw>__BLOCKSTART__ __ROWSTART__</mj-raw>
+
+      <!-- order-row-->
+      <mj-section padding="30px 25px">
+        <mj-column width="15%" padding="0">
+          <mj-image align="left" padding="0 20px 20px 0" src="__IMAGE__" width="100px" border-radius="4px" />
+        </mj-column>
+        <mj-column width="85%" css-class="order-info">
+          <mj-text font-size="13px">
+            <b>__TITLE__</b> __VENDOR__
+            <p>
+              Цвет: __COLOR__<br />
+              Артикул: __STYLE__<br />
+              ID: __ID__
+            </p>
+          </mj-text>
+          <mj-table font-size="12px">
+            <tr>
+              <th>Размер</th>
+              <th>Кол-во</th>
+              <th>Цена,&nbsp;₽</th>
+              <th>Скидка,&nbsp;₽</th>
+              <th>Сумма,&nbsp;₽</th>
+            </tr>
+            <tr>
+              <td>__SIZESTART__ __SIZE__ <br />__SIZEEND__</td>
+              <td>__SIZENUMSTART__ __NUM__ шт. <br />__SIZENUMEND__</td>
+              <td>__SIZEPRICESTART__ __PRICE__ <br />__SIZEPRICEEND__</td>
+              <td class="good">__SIZEDISCOUNTSTART__ __DISCOUNT__ <br />__SIZEDISCOUNTEND__</td>
+              <td><b>__SIZETOTALSTART__ __SIZETOTAL__ <br />__SIZETOTALEND__</b></td>
+            </tr>
+          </mj-table>
+        </mj-column>
+        <mj-column width="100%" padding-top="30px">
+          <mj-divider padding="0" />
+        </mj-column>
+      </mj-section>
+
+      <mj-raw>__ROWEND__ __BLOCKEND__</mj-raw>
+
+      <!-- order-total -->
+      <mj-section>
+        <mj-column>
+          <mj-text align="right" padding="0 35px">
+            <p>
+              <small class="good">Скидка: __GRANDTOTALDISCOUNT__</small> <br />
+              <b>Итого: __GARNDTOTAL__₽</b>
+            </p>
+            <p>
+              Благодарим за покупку!<br />
+              Мы уже начали формировать ваш заказ
+            </p>
+          </mj-text>
+        </mj-column>
+      </mj-section>
+
       <mj-raw>__END__</mj-raw>
 
       <!-- footer-content -->

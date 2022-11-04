@@ -1,19 +1,22 @@
 <mjml lang="ru">
   <mj-head>
-    <mj-title>Рассылка с картинкой</mj-title>
+    <mj-title>Новогодняя распродажа 2022</mj-title>
+
     <mj-attributes>
       <mj-all font-family="Arial, Helvetica" />
-      <mj-body background-color="#f7f7f7" />
-      <mj-section padding="0" background-color="#ffffff" />
       <mj-text color="#232d37" font-size="17px" line-height="22px" />
-      <mj-button color="#ffffff" background-color="#ab064e" font-size="16px" line-height="28px" font-weight="bold" border-radius="6px" />
+      <mj-button color="#fff" background-color="#ab064e" font-size="16px" line-height="28px" font-weight="bold" border-radius="6px" />
       <mj-divider border-color="#f0f0f0" border-width="1px" padding="30px 25px" />
-      <mj-class name="h1" font-size="28px" line-height="33px" font-weight="bold" padding-top="60px" padding-right="30px" />
+      <mj-section padding="0 15px" background-color="#fff" />
+      <mj-body background-color="#f7f7f7" />
+      <mj-button color="#fff" />
+
+      <mj-class name="h1" font-size="28px" line-height="33px" font-weight="bold" />
       <mj-class name="h2" font-size="20px" line-height="28px" font-weight="bold" />
       <mj-class name="footer-contacts" font-size="16px" line-height="19px" color="#83898d" />
       <mj-class name="footer-bottom" font-size="14px" line-height="19px" color="#83898d" />
-      <mj-class name="product" font-size="16px" line-height="17px" />
     </mj-attributes>
+
     <mj-style inline="inline">
       .gradient > table {
       background: linear-gradient(120deg, #980764, #d50342) !important;
@@ -24,11 +27,12 @@
       .wrapper {
       box-shadow: 0 5px 7px #e7e7e7 !important;
       border-radius: 6px !important;
+      margin-bottom: 50px !important;
       }
 
-      a {
+      .wrapper p a {
       text-decoration: none !important;
-      color: #ab064e;
+      color: #ab064e !important;
       }
 
       .link-box a {
@@ -48,6 +52,10 @@
       line-height: 30px !important;
       }
 
+      .pic img {
+      border-radius: 10px !important;
+      }
+
       .order-info th {
       font-weight: 400 !important;
       color: #adb2b5 !important;
@@ -63,11 +71,11 @@
       margin: 5px 0 10px 0 !important;
       }
 
-      .good {
-      color: #038184 !important;
+      .order-pic img {
+      border-radius: 4px !important;
       }
-
     </mj-style>
+
     <mj-style>
       @media (max-width:480px) {
 
@@ -79,7 +87,7 @@
         .order-info table tr th:nth-child(3),
         .order-info table tr td:nth-child(3) {
           display: none;
-        }
+        }        
       }
     </mj-style>
   </mj-head>
@@ -91,15 +99,18 @@
       <!-- header -->
       <mj-section padding="0">
         <mj-column css-class="separate gradient" border-radius="6px 6px 0 0">
-          <mj-image href="https://optmoyo.ru/" src="cid:logo.png" alt="optmoyo.ru" width="117px" height="27px" align="left" padding="17px 40px" />
+          <mj-image href="https://optmoyo.ru/" src="assets/logo.png" alt="optmoyo.ru" width="117px" height="27px" align="left" padding="17px 40px" />
         </mj-column>
       </mj-section>
 
-      <mj-raw>__START__</mj-raw>
       <!-- pic -->
-      <mj-section>
-        <mj-column padding="20px 0 0 0">
-          <mj-image href="__PHOTOLINK__" src="__PHOTOURL__" alt="__PHOTOALT__" border-radius="10px" />
+      <mj-section css-class="pic">
+        <mj-column padding="30px 25px">
+          <mj-raw>
+            <a href="https://optmoyo.ru/zhen/catalog/1001dress" targrt="_blank">
+              <img src="assets/promo1.jpg" alt="Новогодняя распродажа 2022" width="100%">
+            </a>
+          </mj-raw>
         </mj-column>
       </mj-section>
 
@@ -107,16 +118,23 @@
       <mj-section>
         <mj-column>
           <mj-text>
-            <p>Здравствуйте, __NAMENAME__!</p>
-            <p>__TEXT__</p>
+            <p>Здравствуйте, Виктория!</p>
+            <p>Участвуйте в новогодней акции и получайте скидки до 30%!</p>
+
+            <p>В акции принимают участие, следующие бренды:
+              <a href="https://optmoyo.ru/zhen/catalog/1001dress">1001 DRESS</a>,
+              <a href="https://optmoyo.ru/devochki/catalog/batik-girls">BATIK</a>,
+              <a href="https://optmoyo.ru/zhen/catalog/eldar-brands">ELDAR</a>.
+            </p>
           </mj-text>
         </mj-column>
       </mj-section>
 
+
       <!-- categories -->
-      <mj-section padding="50px 0 0 0" background-color="#fff">
+      <mj-section padding="80px 0 30px 0" background-color="#fff">
         <mj-column width="100%" padding="0">
-          <mj-image src="https://cdn0.moyo.moda/static/ws/mail/cats.png" alt="Категории товаров на сайте" padding="0" />
+          <mj-image src="assets/categories.jpg" alt="Категории на сайте" padding="0" />
         </mj-column>
         <mj-column width="100%">
           <mj-text css-class="categories" align="center">
@@ -129,39 +147,36 @@
           </mj-text>
         </mj-column>
       </mj-section>
-      <mj-raw>__END__</mj-raw>
 
-      <!-- footer-content -->
-      <mj-section padding="0">
-        <mj-column width="100%">
-          <mj-divider padding="50px 0 30px 0" />
-        </mj-column>
-        <mj-column width="100%">
+      <!-- footer-contacts -->
+      <mj-section>
+        <mj-column>
           <mj-text mj-class="footer-contacts" css-class="footer-contacts">
             <p><a href="tel:+74996088925">8 (499) 608-89-25</a> — для Москвы</p>
             <p><a href="tel:+78003012575">8 (800) 301-25-75</a> — для России (звонок бесплатный)</p>
             <p>Мы работаем по будням с 10:00 до 20:00</p>
           </mj-text>
         </mj-column>
-        <mj-column width="100%">
+      </mj-section>
+
+      <!-- footer-social -->
+      <mj-section>
+        <mj-column>
           <mj-text css-class="social" align="left">
-            <a href="https://instagram.com/optmoyo.ru/" target="_blank"><img src="cid:ig.png" alt="IG" width="33px" height="33px" /></a>
-            <a href="https://vk.com/optmoyo" target="_blank"><img src="cid:vk.png" alt="VK" width="33px" height="33px" /></a>
-            <a href="https://www.facebook.com/OptMoyo.Ru" target="_blank"><img src="cid:fb.png" alt="FB" width="33px" height="33px" /></a>
-          </mj-text>
-        </mj-column>
-        <mj-column width="100%">
-          <mj-text mj-class="footer-bottom">
-            <p>Вы получили это письмо, потому что являетесь клиентом интернет-магазина OptMoyo.Ru. Письма приходят только в результате ваших действий на сайте.</p>
-            <p>Вы можете отписаться от важных сообщений, но эффективность работы с нами будет значительно снижена.</p>
+            <a href="https://instagram.com/optmoyo.ru/" target="_blank"><img src="assets/ig.png" alt="IG" width="33px" height="33px" /></a>
+            <a href="https://vk.com/optmoyo" target="_blank"><img src="assets/vk.png" alt="VK" width="33px" height="33px" /></a>
+            <a href="https://www.facebook.com/OptMoyo.Ru" target="_blank"><img src="assets/fb.png" alt="FB" width="33px" height="33px" /></a>
           </mj-text>
         </mj-column>
       </mj-section>
 
-      <!-- footer-decor -->
+      <!-- footer-bottom -->
       <mj-section padding="0" background-color="transparent">
-        <mj-column padding="0" border-radius="0 0 6px 6px" background-color="#ffffff">
-          <mj-spacer height="15px" />
+        <mj-column padding="0 15px 30px 15px" css-class="separate" border-radius="0 0 6px 6px" background-color="#fff">
+          <mj-text mj-class="footer-bottom">
+            <p>Вы получили это письмо, потому что являетесь клиентом интернет-магазина OptMoyo.Ru. Письма приходят только в результате ваших действий на сайте.</p>
+            <p>Вы можете отписаться от важных сообщений, но эффективность работы с нами будет значительно снижена.</p>
+          </mj-text>
         </mj-column>
       </mj-section>
 

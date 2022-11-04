@@ -1,6 +1,6 @@
 <mjml lang="ru">
   <mj-head>
-    <mj-title>Рассылка с картинкой</mj-title>
+    <mj-title>Ваш заказ отправлен</mj-title>
     <mj-attributes>
       <mj-all font-family="Arial, Helvetica" />
       <mj-body background-color="#f7f7f7" />
@@ -96,10 +96,28 @@
       </mj-section>
 
       <mj-raw>__START__</mj-raw>
-      <!-- pic -->
+      <!-- text -->
       <mj-section>
-        <mj-column padding="20px 0 0 0">
-          <mj-image href="__PHOTOLINK__" src="__PHOTOURL__" alt="__PHOTOALT__" border-radius="10px" />
+        <mj-column>
+          <mj-text mj-class="h1">
+            Ваш заказ отправлен
+          </mj-text>
+          <mj-text>
+            <p>Здравствуйте, __USER__!</p>
+            <p>
+              Мы отправили вам заказ/заказы: <b>__ORDER_NOs__</b><br />
+              Номер транспортной накладной: <b>__TRANSDOC__</b>
+            </p>
+          </mj-text>
+        </mj-column>
+      </mj-section>
+
+      <!-- alert -->
+      <mj-section>
+        <mj-column inner-border-radius="6px" inner-background-color="#fff0f1" padding="0 25px">
+          <mj-text css-class="link-box">
+            <p><b>Внимание!</b> По вашему заказу переплата на сумму __MONEYBACK__₽</p>
+          </mj-text>
         </mj-column>
       </mj-section>
 
@@ -107,8 +125,12 @@
       <mj-section>
         <mj-column>
           <mj-text>
-            <p>Здравствуйте, __NAMENAME__!</p>
-            <p>__TEXT__</p>
+            <p>
+              Перейдите, пожалуйста, по данной <a href="__LINK_HREF__" target="_blank">ССЫЛКЕ</a>,
+              чтобы подтвердить заявку на возврат денежных средств.
+              Или сделайте тоже самое в&nbsp;Личном кабинете.
+            </p>
+            <p>Спасибо за заказ!</p>
           </mj-text>
         </mj-column>
       </mj-section>
@@ -129,6 +151,7 @@
           </mj-text>
         </mj-column>
       </mj-section>
+
       <mj-raw>__END__</mj-raw>
 
       <!-- footer-content -->

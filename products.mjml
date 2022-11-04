@@ -1,22 +1,19 @@
 <mjml lang="ru">
   <mj-head>
-    <mj-title>MARGO - новый бренд на сайте OptMoyo.Ru</mj-title>
-
+    <mj-title>Рассылка с товарами</mj-title>
     <mj-attributes>
       <mj-all font-family="Arial, Helvetica" />
-      <mj-text color="#232d37" font-size="17px" line-height="22px" />
-      <mj-button color="#fff" background-color="#ab064e" font-size="16px" line-height="28px" font-weight="bold" border-radius="6px" />
-      <mj-divider border-color="#f0f0f0" border-width="1px" padding="30px 25px" />
-      <mj-section padding="0 15px" background-color="#fff" />
       <mj-body background-color="#f7f7f7" />
-      <mj-button color="#fff" />
-
-      <mj-class name="h1" font-size="28px" line-height="33px" font-weight="bold" />
+      <mj-section padding="0" background-color="#ffffff" />
+      <mj-text color="#232d37" font-size="17px" line-height="22px" />
+      <mj-button color="#ffffff" background-color="#ab064e" font-size="16px" line-height="28px" font-weight="bold" border-radius="6px" />
+      <mj-divider border-color="#f0f0f0" border-width="1px" padding="30px 25px" />
+      <mj-class name="h1" font-size="28px" line-height="33px" font-weight="bold" padding-top="60px" padding-right="30px" />
       <mj-class name="h2" font-size="20px" line-height="28px" font-weight="bold" />
       <mj-class name="footer-contacts" font-size="16px" line-height="19px" color="#83898d" />
       <mj-class name="footer-bottom" font-size="14px" line-height="19px" color="#83898d" />
+      <mj-class name="product" font-size="16px" line-height="17px" />
     </mj-attributes>
-
     <mj-style inline="inline">
       .gradient > table {
       background: linear-gradient(120deg, #980764, #d50342) !important;
@@ -27,12 +24,11 @@
       .wrapper {
       box-shadow: 0 5px 7px #e7e7e7 !important;
       border-radius: 6px !important;
-      margin-bottom: 50px !important;
       }
 
-      .wrapper p a {
+      a {
       text-decoration: none !important;
-      color: #ab064e !important;
+      color: #ab064e;
       }
 
       .link-box a {
@@ -52,10 +48,6 @@
       line-height: 30px !important;
       }
 
-      .pic img {
-      border-radius: 10px !important;
-      }
-
       .order-info th {
       font-weight: 400 !important;
       color: #adb2b5 !important;
@@ -71,11 +63,11 @@
       margin: 5px 0 10px 0 !important;
       }
 
-      .order-pic img {
-      border-radius: 4px !important;
+      .good {
+      color: #038184 !important;
       }
-    </mj-style>
 
+    </mj-style>
     <mj-style>
       @media (max-width:480px) {
 
@@ -87,10 +79,11 @@
         .order-info table tr th:nth-child(3),
         .order-info table tr td:nth-child(3) {
           display: none;
-        }        
+        }
       }
     </mj-style>
   </mj-head>
+
   <mj-body>
     <mj-wrapper></mj-wrapper>
     <mj-wrapper css-class="wrapper" padding="0">
@@ -98,183 +91,99 @@
       <!-- header -->
       <mj-section padding="0">
         <mj-column css-class="separate gradient" border-radius="6px 6px 0 0">
-          <mj-image href="https://optmoyo.ru/" src="assets/logo.png" alt="optmoyo.ru" width="117px" height="27px" align="left" padding="17px 40px" />
+          <mj-image href="https://optmoyo.ru/" src="cid:logo.png" alt="optmoyo.ru" width="117px" height="27px" align="left" padding="17px 40px" />
         </mj-column>
       </mj-section>
 
-      <!-- title -->
-      <mj-section>
-        <mj-column>
-          <mj-text mj-class="h1" padding-top="60px" padding-right="30px">
-            MARGO — новый бренд на&nbsp;сайте OptMoyo.ru
-          </mj-text>
-        </mj-column>
-      </mj-section>
-
-
-      <!-- text -->
+      <mj-raw>__START__</mj-raw>
+      <!-- content -->
       <mj-section>
         <mj-column>
           <mj-text>
-            <p>Здравствуйте, Виктория!</p>
-            <p>Предлагаем ознакомиться с новым брендом женской одежды <a href="https://optmoyo.ru/zhen/catalog/margo">MARGO</a>.</p>
+            <p>Здравствуйте, __NAMENAME__!</p>
+            <p>__TEXT__</p>
           </mj-text>
         </mj-column>
       </mj-section>
 
-
-
-      <!-- subtitle -->
-      <mj-section>
-        <mj-column>
-          <mj-text mj-class="h2">
-            <p>Вам может понравиться:</p>
-          </mj-text>
-        </mj-column>
-      </mj-section>
-
+      <mj-raw>__ROWSTART__</mj-raw>
 
       <!-- products row -->
-      <mj-section padding="10px 30px">
-        <mj-column padding="7px">
-          <mj-image padding="0" border-radius="6px" src="assets/product.jpg" alt="Комплект (Худи+Брюки) MARGO" href="https://optmoyo.ru/product/813603" align="left" />
-          <mj-text padding="0" mj-class="product">
-            <p><b>Комплект (Худи+Брюки)</b> MARGO</p>
-            <p><b>1141,00 ₽</b></p>
+      <mj-section padding="10px 20px">
+        <mj-column padding="10px">
+          <mj-image href="__HREF1__" src="__IMAGE1__" alt="__NAME1__ __BRAND1__" align="left" padding="0" border-radius="6px" />
+          <mj-text mj-class="product" padding="0">
+            <p style="margin-bottom:0;"><small>__NAME1__ __BRAND1__</small></p>
+            <p style="margin-top:5px;"><small class="good"><s>&nbsp;__OLDPRICE1__&nbsp;</s></small> <br /><b>__PRICE1__</b></p>
           </mj-text>
         </mj-column>
-        <mj-column padding="7px">
-          <mj-image padding="0" border-radius="6px" src="assets/product.jpg" alt="Комплект (Худи+Брюки) MARGO" href="https://optmoyo.ru/product/813603" align="left" />
-          <mj-text padding="0" mj-class="product">
-            <p><b>Комплект (Худи+Брюки)</b> MARGO</p>
-            <p><b>1141,00 ₽</b></p>
+        <mj-column padding="10px">
+          <mj-image href="__HREF2__" src="__IMAGE2__" alt="__NAME2__ __BRAND2__" align="left" padding="0" border-radius="6px" />
+          <mj-text mj-class="product" padding="0">
+            <p style="margin-bottom:0;"><small>__NAME2__ __BRAND2__</small></p>
+            <p style="margin-top:5px;"><small class="good"><s>&nbsp;__OLDPRICE2__&nbsp;</s></small> <br /><b>__PRICE2__</b></p>
           </mj-text>
         </mj-column>
-        <mj-column padding="7px">
-          <mj-image padding="0" border-radius="6px" src="assets/product.jpg" alt="Комплект (Худи+Брюки) MARGO" href="https://optmoyo.ru/product/813603" align="left" />
-          <mj-text padding="0" mj-class="product">
-            <p><b>Комплект (Худи+Брюки)</b> MARGO</p>
-            <p><b>1141,00 ₽</b></p>
-          </mj-text>
-        </mj-column>
-      </mj-section>
-
-      <!-- products row -->
-      <mj-section padding="10px 30px">
-        <mj-column padding="7px">
-          <mj-image padding="0" border-radius="6px" src="assets/product.jpg" alt="Комплект (Худи+Брюки) MARGO" href="https://optmoyo.ru/product/813603" align="left" />
-          <mj-text padding="0" mj-class="product">
-            <p><b>Комплект (Худи+Брюки)</b> MARGO</p>
-            <p><b>1141,00 ₽</b></p>
-          </mj-text>
-        </mj-column>
-        <mj-column padding="7px">
-          <mj-image padding="0" border-radius="6px" src="assets/product.jpg" alt="Комплект (Худи+Брюки) MARGO" href="https://optmoyo.ru/product/813603" align="left" />
-          <mj-text padding="0" mj-class="product">
-            <p><b>Комплект (Худи+Брюки)</b> MARGO</p>
-            <p><b>1141,00 ₽</b></p>
-          </mj-text>
-        </mj-column>
-        <mj-column padding="7px">
-          <mj-image padding="0" border-radius="6px" src="assets/product.jpg" alt="Комплект (Худи+Брюки) MARGO" href="https://optmoyo.ru/product/813603" align="left" />
-          <mj-text padding="0" mj-class="product">
-            <p><b>Комплект (Худи+Брюки)</b> MARGO</p>
-            <p><b>1141,00 ₽</b></p>
+        <mj-column padding="10px">
+          <mj-image href="__HREF3__" src="__IMAGE3__" alt="__NAME3__ __BRAND3__" align="left" padding="0" border-radius="6px" />
+          <mj-text mj-class="product" padding="0">
+            <p style="margin-bottom:0;"><small>__NAME3__ __BRAND3__</small></p>
+            <p style="margin-top:5px;"><small class="good"><s>&nbsp;__OLDPRICE3__&nbsp;</s></small> <br /><b>__PRICE3__</b></p>
           </mj-text>
         </mj-column>
       </mj-section>
 
+      <mj-raw>__ROWEND__</mj-raw>
 
-      <!-- products row -->
-      <mj-section padding="10px 30px">
-        <mj-column padding="7px">
-          <mj-image padding="0" border-radius="6px" src="assets/product.jpg" alt="Комплект (Худи+Брюки) MARGO" href="https://optmoyo.ru/product/813603" align="left" />
-          <mj-text padding="0" mj-class="product">
-            <p><b>Комплект (Худи+Брюки)</b> MARGO</p>
-            <p><b>1141,00 ₽</b></p>
-          </mj-text>
+      <!-- categories -->
+      <mj-section padding="50px 0 0 0" background-color="#fff">
+        <mj-column width="100%" padding="0">
+          <mj-image src="https://cdn0.moyo.moda/static/ws/mail/cats.png" alt="Категории товаров на сайте" padding="0" />
         </mj-column>
-        <mj-column padding="7px">
-          <mj-image padding="0" border-radius="6px" src="assets/product.jpg" alt="Комплект (Худи+Брюки) MARGO" href="https://optmoyo.ru/product/813603" align="left" />
-          <mj-text padding="0" mj-class="product">
-            <p><b>Комплект (Худи+Брюки)</b> MARGO</p>
-            <p><b>1141,00 ₽</b></p>
-          </mj-text>
-        </mj-column>
-        <mj-column padding="7px">
-          <mj-image padding="0" border-radius="6px" src="assets/product.jpg" alt="Комплект (Худи+Брюки) MARGO" href="https://optmoyo.ru/product/813603" align="left" />
-          <mj-text padding="0" mj-class="product">
-            <p><b>Комплект (Худи+Брюки)</b> MARGO</p>
-            <p><b>1141,00 ₽</b></p>
+        <mj-column width="100%">
+          <mj-text css-class="categories" align="center">
+            <a href="https://optmoyo.ru/zhen/catalog" target="_blank">Женщинам</a>
+            <a href="https://optmoyo.ru/devochki/catalog" target="_blank">Девочкам</a>
+            <a href="https://optmoyo.ru/muzh/catalog" target="_blank">Мужчинам</a>
+            <a href="https://optmoyo.ru/malchiki/catalog" target="_blank">Мальчикам</a>
+            <a href="https://optmoyo.ru/house/catalog" target="_blank">Для дома</a>
+            <a href="https://optmoyo.ru/toys/catalog" target="_blank">Игрушки</a>
           </mj-text>
         </mj-column>
       </mj-section>
+      <mj-raw>__END__</mj-raw>
 
-      <!-- products row -->
-      <mj-section padding="10px 30px">
-        <mj-column padding="7px">
-          <mj-image padding="0" border-radius="6px" src="assets/product.jpg" alt="Комплект (Худи+Брюки) MARGO" href="https://optmoyo.ru/product/813603" align="left" />
-          <mj-text padding="0" mj-class="product">
-            <p><b>Комплект (Худи+Брюки)</b> MARGO</p>
-            <p><b>1141,00 ₽</b></p>
-          </mj-text>
-        </mj-column>
-        <mj-column padding="7px">
-          <mj-image padding="0" border-radius="6px" src="assets/product.jpg" alt="Комплект (Худи+Брюки) MARGO" href="https://optmoyo.ru/product/813603" align="left" />
-          <mj-text padding="0" mj-class="product">
-            <p><b>Комплект (Худи+Брюки)</b> MARGO</p>
-            <p><b>1141,00 ₽</b></p>
-          </mj-text>
-        </mj-column>
-        <mj-column padding="7px">
-          <mj-image padding="0" border-radius="6px" src="assets/product.jpg" alt="Комплект (Худи+Брюки) MARGO" href="https://optmoyo.ru/product/813603" align="left" />
-          <mj-text padding="0" mj-class="product">
-            <p><b>Комплект (Худи+Брюки)</b> MARGO</p>
-            <p><b>1141,00 ₽</b></p>
-          </mj-text>
-        </mj-column>
-      </mj-section>
-
-
-
-
-
-      <!-- divider -->
+      <!-- footer-content -->
       <mj-section padding="0">
-        <mj-column>
-          <mj-divider padding="70px 0 30px 0" />
+        <mj-column width="100%">
+          <mj-divider padding="50px 0 30px 0" />
         </mj-column>
-      </mj-section>
-
-      <!-- footer-contacts -->
-      <mj-section>
-        <mj-column>
+        <mj-column width="100%">
           <mj-text mj-class="footer-contacts" css-class="footer-contacts">
             <p><a href="tel:+74996088925">8 (499) 608-89-25</a> — для Москвы</p>
             <p><a href="tel:+78003012575">8 (800) 301-25-75</a> — для России (звонок бесплатный)</p>
             <p>Мы работаем по будням с 10:00 до 20:00</p>
           </mj-text>
         </mj-column>
-      </mj-section>
-
-      <!-- footer-social -->
-      <mj-section>
-        <mj-column>
+        <mj-column width="100%">
           <mj-text css-class="social" align="left">
-            <a href="https://instagram.com/optmoyo.ru/" target="_blank"><img src="assets/ig.png" alt="IG" width="33px" height="33px" /></a>
-            <a href="https://vk.com/optmoyo" target="_blank"><img src="assets/vk.png" alt="VK" width="33px" height="33px" /></a>
-            <a href="https://www.facebook.com/OptMoyo.Ru" target="_blank"><img src="assets/fb.png" alt="FB" width="33px" height="33px" /></a>
+            <a href="https://instagram.com/optmoyo.ru/" target="_blank"><img src="cid:ig.png" alt="IG" width="33px" height="33px" /></a>
+            <a href="https://vk.com/optmoyo" target="_blank"><img src="cid:vk.png" alt="VK" width="33px" height="33px" /></a>
+            <a href="https://www.facebook.com/OptMoyo.Ru" target="_blank"><img src="cid:fb.png" alt="FB" width="33px" height="33px" /></a>
           </mj-text>
         </mj-column>
-      </mj-section>
-
-      <!-- footer-bottom -->
-      <mj-section padding="0" background-color="transparent">
-        <mj-column padding="0 15px 30px 15px" css-class="separate" border-radius="0 0 6px 6px" background-color="#fff">
+        <mj-column width="100%">
           <mj-text mj-class="footer-bottom">
             <p>Вы получили это письмо, потому что являетесь клиентом интернет-магазина OptMoyo.Ru. Письма приходят только в результате ваших действий на сайте.</p>
             <p>Вы можете отписаться от важных сообщений, но эффективность работы с нами будет значительно снижена.</p>
           </mj-text>
+        </mj-column>
+      </mj-section>
+
+      <!-- footer-decor -->
+      <mj-section padding="0" background-color="transparent">
+        <mj-column padding="0" border-radius="0 0 6px 6px" background-color="#ffffff">
+          <mj-spacer height="15px" />
         </mj-column>
       </mj-section>
 

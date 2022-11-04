@@ -1,6 +1,6 @@
 <mjml lang="ru">
   <mj-head>
-    <mj-title>Рассылка с картинкой</mj-title>
+    <mj-title>Вам выставлен новый счет</mj-title>
     <mj-attributes>
       <mj-all font-family="Arial, Helvetica" />
       <mj-body background-color="#f7f7f7" />
@@ -96,10 +96,27 @@
       </mj-section>
 
       <mj-raw>__START__</mj-raw>
-      <!-- pic -->
+
+      <!-- text -->
       <mj-section>
-        <mj-column padding="20px 0 0 0">
-          <mj-image href="__PHOTOLINK__" src="__PHOTOURL__" alt="__PHOTOALT__" border-radius="10px" />
+        <mj-column>
+          <mj-text mj-class="h1">
+            Вам выставлен новый счет
+          </mj-text>
+          <mj-text>
+            <p>Здравствуйте, __USER__!</p>
+            <p>Вам выставлен счёт по заказу/заказам: <b>__ORDER_NOs__</b></p>
+            <p>Сумма счёта к оплате: <b>__PRICE__</b></p>
+          </mj-text>
+        </mj-column>
+      </mj-section>
+
+      <!-- alert -->
+      <mj-section>
+        <mj-column inner-border-radius="6px" inner-background-color="#fff0f1" padding="0 25px">
+          <mj-text css-class="link-box">
+            <p><b>Внимание!</b> Если оплата будет производиться не от того плательщика, который указан в счёте, мы, к сожалению, не сможем его принять и деньги будут возвращены.</p>
+          </mj-text>
         </mj-column>
       </mj-section>
 
@@ -107,25 +124,8 @@
       <mj-section>
         <mj-column>
           <mj-text>
-            <p>Здравствуйте, __NAMENAME__!</p>
-            <p>__TEXT__</p>
-          </mj-text>
-        </mj-column>
-      </mj-section>
-
-      <!-- categories -->
-      <mj-section padding="50px 0 0 0" background-color="#fff">
-        <mj-column width="100%" padding="0">
-          <mj-image src="https://cdn0.moyo.moda/static/ws/mail/cats.png" alt="Категории товаров на сайте" padding="0" />
-        </mj-column>
-        <mj-column width="100%">
-          <mj-text css-class="categories" align="center">
-            <a href="https://optmoyo.ru/zhen/catalog" target="_blank">Женщинам</a>
-            <a href="https://optmoyo.ru/devochki/catalog" target="_blank">Девочкам</a>
-            <a href="https://optmoyo.ru/muzh/catalog" target="_blank">Мужчинам</a>
-            <a href="https://optmoyo.ru/malchiki/catalog" target="_blank">Мальчикам</a>
-            <a href="https://optmoyo.ru/house/catalog" target="_blank">Для дома</a>
-            <a href="https://optmoyo.ru/toys/catalog" target="_blank">Игрушки</a>
+            <p>Счёт прикреплен к письму. Также его можно посмотреть в&nbsp;Личном кабинете или&nbsp;по&nbsp;прямой ссылке: <a href="__LINK_HREF__" target="_blank">__LINK_TEXT__</a>.</p>
+            <p>Ждём скорейшей оплаты.</p>
           </mj-text>
         </mj-column>
       </mj-section>
